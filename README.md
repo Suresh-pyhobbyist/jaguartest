@@ -160,9 +160,33 @@ node test.js --watch
 
 ### **Configuration**
 
-- **`setConfig(options)`**  
-  Set global options such as `concurrency`, `snapshotDir`, `reporter`, and CLI filters like `--grep`. Use this to fine-tune your testing experience.
+| **Setting**          | **Purpose** |
+|----------------------|------------|
+| `globalTimeout`      | Limits how long all tests can run. `null` means no limit. |
+| `randomizeTests`     | Runs tests in **random order** when `true`, else runs them **in order** when `false`. |
+| `concurrency`        | Number of tests running **at the same time** (default is `50` for speed). |
+| `snapshotDir`        | Where **snapshot files** are saved. Default location: `__snapshots__` folder. |
+| `performanceMode`    | `false` → Shows **detailed test results**. `true` → Shows **minimal output** for speed. |
+| `disableSnapshots`   | If `true`, **snapshot tests are turned off**. Default is `false` (snapshots enabled). |
+| `reporter`           | Defines how test results are displayed → `'verbose'` (detailed) or `'minimal'`. |
+| `grep`              | **Filters tests by keyword**. Example: `grep: "math"` runs only math-related tests. |
+| `watch`             | If `true`, **tests automatically rerun** when files change. Default is `false`. |
 
+```
+Example:
+
+const defaultConfig = {
+  globalTimeout: null,       
+  randomizeTests: false,    
+  concurrency: 50,           
+  snapshotDir: path.join(process.cwd(), '__snapshots__'), 
+  performanceMode: false,    
+  disableSnapshots: false,   
+  reporter: 'verbose',       
+  grep: null,                
+  watch: false               
+};
+```
 ---
 
 ## License
@@ -174,6 +198,4 @@ node test.js --watch
 
 © Jaguartest. All rights reserved.
 
-```
 💖 Thanks for checking out **Jaguartest**!
-```
