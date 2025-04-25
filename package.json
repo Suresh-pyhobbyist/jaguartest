@@ -1,0 +1,33 @@
+{
+  "name": "jaguartest",
+  "version": "1.0.0",
+  "description": "JaguarTest - A powerful and flexible test framework",
+  "main": "jaguartest.js",
+  "type": "commonjs",
+  "assets": {
+    "images": ["assets/j_cover.png"]
+  },
+  "scripts": {
+    "start": "node jaguartest.js",
+    "test": "node test.js"
+  },
+  "author": "suresh",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Suresh-pyhobbyist/jaguartest.git"
+  },
+  "keywords": [
+    "test",
+    "assertions",
+    "framework",
+    "automation",
+    "tdd",
+    "bdd",
+    "jaguartest"
+  ],
+  "homepage": "https://github.com/Suresh-pyhobbyist/jaguartest#readme",
+  "bugs": {
+    "url": "https://github.com/Suresh-pyhobbyist/jaguartest/issues"
+  }
+}
